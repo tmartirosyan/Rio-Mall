@@ -1,28 +1,23 @@
 shopsWithCoordinates1Stage = {
     "CTY": [(160, 210), (180, 230)],
-    "Magus": [(390, 350), (410, 370)],
-    "Good's House": [(760, 350), (780, 370)],
-    "Natali Pharm": [(560, 125), (580, 145)],
-    "Global Beauty": [(455, 125), (475, 145)],
-    "Ascona": [(760, 100), (780, 120)],
-    "Bookinist": [(1010, 220), (1030, 240)],
+    "MAGUS": [(390, 350), (410, 370)],
+    "GOODS HOUSE": [(760, 350), (780, 370)],
+    "NATALI PHARM": [(560, 125), (580, 145)],
+    "GLOBAL BEAUTY": [(455, 125), (475, 145)],
+    "ASCONA": [(760, 100), (780, 120)],
+    "BOOKINIST": [(1010, 220), (1030, 240)],
 }
 # shopsWithCoordinates2Stage = {}
 # shopsWithCoordinates3Stage = {}
 pointsInFrontOfShops = {
     "CTY": [0,1,2],
-    "Magus": [2],
-    "Global Beauty": [2,3,4],
-    "Natali Pharm": [4],
-    "Good's House": [4,5,6],
-    "Ascona": [5,6],
-    "Bookinist": [6],
+    "MAGUS": [2],
+    "GLOABL BEAUTY": [2,3,4],
+    "NATALI PHARM": [4],
+    "GOODS HOUSE": [4,5,6],
+    "ASCONA": [5,6],
+    "BOOKINIST": [6],
 }
-RIO = {
-	# key: stage, value: shops directory
-	1: shopsWithCoordinates1Stage
-}
-
 pointRectanglesWayFirstStage = [
     [(420, 40), (440, 60)],
     [(360, 110), (380, 130)],
@@ -32,14 +27,9 @@ pointRectanglesWayFirstStage = [
     [(940, 220), (960, 240)]
 ]
 
-# xanutneri nshum
-# point_rectangles_shops = [
-#     [(160, 210), (180, 230)], # dzax mec
-#     [(390, 350), (410, 370)], # nerqevic arajin (mejtexin)
-#     [(760, 350), (780, 370)], # nerqevic verjin
-#     [(560, 125), (580, 145)], # verevic erkrord
-#     [(455, 125), (475, 145)], # verevic arajin
-#     [(760, 100), (780, 120)], # verevi xaxtvac@
-#     [(845, 220), (865, 240)], # mejtexi arajin
-#     [(1010, 220), (1030, 240)], # mejtexi erkrord
-# ]
+
+RIO = {
+    # key: stage, value: shops directory
+    1: shopsWithCoordinates1Stage
+}
+PATH = "1.png"#'C:\\Users\\tigran.martirosyan\\Desktop\\1.png'

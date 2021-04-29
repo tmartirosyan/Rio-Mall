@@ -4,9 +4,7 @@ import numpy as np
 import RioDatas as RD
 import functionality as functional
 
-
-path = "1.png"#'C:\\Users\\tigran.martirosyan\\Desktop\\1.png'
-img = cv2.imread(path)
+img = cv2.imread(RD.PATH)
 imgGrey = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 _, thrash = cv2.threshold(imgGrey, 240, 255, cv2.THRESH_BINARY)
 contours, _ = cv2.findContours(thrash, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
@@ -23,13 +21,18 @@ for contour in contours:
     x = approx.ravel()[0]
     y = approx.ravel()[1]
 
-line_thickness = 2
+index = 1
 for point in RD.pointRectanglesWayFirstStage:#range(len(point_rectangles_way)):
-    cv2.rectangle(img, point[0], point[1], (0, 255, 0), line_thickness)
+    functional.drawRect(img,point[0],point[1],(0,255,0))
+    cv2.putText(img,str(index),point[0],cv2.FONT_HERSHEY_SIMPLEX,1,(0, 102, 255),1,cv2.LINE_AA)
+    index += 1
 
 for point in RD.shopsWithCoordinates1Stage.values():#range(len(point_rectangles_way)):
-    cv2.rectangle(img, point[0], point[1], (0, 0, 255), line_thickness)
+    functional.drawRect(img,point[0],point[1],(255,0,0))
 
-cv2.imshow("path", img)
-cv2.waitKey(0)
-cv2.destroyAllWindows()
+
+functional.imgShow("window",img)
+ls = functional.detetctFirstAndLastPoints()
+functional.drawRect(img,ls[0],ls[1],(0,0,255))
+functional.drawRect(img,ls[2][0],ls[2][1],(0,0,255))
+functional.imgShow("window",img)
